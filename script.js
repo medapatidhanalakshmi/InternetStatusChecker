@@ -13,6 +13,7 @@ function checkInternetConnection(){
         .then((data)=>{
             IPAddressText.textContent=data.ip;
             statusText.textContent='Connected';
+            statusText.style.color='green';
 
             const connection=navigator.connection;
 
@@ -22,6 +23,7 @@ function checkInternetConnection(){
         })
         .catch(()=>{
             statusText.textContent='Disconnected';
+            statusText.style.color='red';
             IPAddressText.textContent='-';
             NetworkStrengthText.textContent='-';
         })
